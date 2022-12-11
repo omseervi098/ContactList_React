@@ -6,11 +6,11 @@ function Edit(props) {
         <div className="col-12">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-warning"
             data-bs-toggle="modal"
             data-bs-target={"#editcontact" + props.id}
           >
-            Edit Contact
+            Edit
           </button>
           <div
             className="modal fade"
@@ -23,9 +23,9 @@ function Edit(props) {
             <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalLabel">
+                  <h4 className="modal-title" id="exampleModalLabel">
                     Edit Contact
-                  </h5>
+                  </h4>
                   <button
                     type="button"
                     className="btn-close"

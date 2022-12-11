@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.header {
+  color: #ffffff;
+  padding: 10px;
+  font-weight: bolder;
+}
+.header h1 {
+  font-size: 3rem;
+}
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.list-group-item {
+  background-color: rgba(185, 225, 247, 0.853) !important;
+  color: #000000 !important;
+}
+.name h3 {
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: bolder;
+  color: #002f52;
+}
+.email {
+  font-size: 1.1rem;
+  text-align: left;
+  color: #4e2a81;
+}
+.phone {
+  font-size: 1.1rem;
+  text-align: left;
+}
+.hide h4 {
+  font-weight: bolder !important;
+}
+.modal-content {
+  background-color: rgba(204, 204, 204, 0.8) !important;
+  color: #000000 !important;
+}
+.modal-content input {
+  background-color: rgba(234, 234, 234, 0.9) !important;
+  color: #000000 !important;
+}
+.col-form-label {
+  font-weight: bolder;
+}
+@media screen and (max-width: 768px) {
+  .name h3,
+  .email,
+  .phone {
+    text-align: center;
+  }
+  .hide {
+    display: none !important;
+  }
+}
