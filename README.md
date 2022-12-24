@@ -4,7 +4,7 @@
 - used ```https://jsonplaceholder.typicode.com/users``` to fetch contacts
 
 
-## Structure
+## File Structure
 * Main Component ```App.js```
   * ```List.js``` has List Component which has group of contact having delete and edit button and some information. 
   * ```Edit.js``` has Edit Component which has modal to update contact.
