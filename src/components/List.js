@@ -23,7 +23,7 @@ function List(props) {
                 <div className="col-12 col-lg-2 my-auto"></div>
               </div>
             </li>
-
+            {/* Rendering all contacts */}
             {props.contacts.map((contact) => (
               <li className="list-group-item" key={contact.id}>
                 <div className="row">

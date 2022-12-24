@@ -114,9 +114,11 @@ function App() {
             <h1>Contact List</h1>
           </div>
           <div className="row">
+            {/* Add Contact */}
             <div className="col-8 col-md-5 mx-auto my-3">
               <Add addContact={addContact} size={contacts.length} />
             </div>
+            {/* List */}
             <div className="col-12 col-md-12 mx-auto my-3">
               {contacts.length !== 0 ? (
                 <List
@@ -129,6 +131,22 @@ function App() {
                   <span className="sr-only"> </span>
                 </div>
               )}
+            </div>
+            {/* Footer */}
+            <div className="col-12 col-md-12 mx-auto my-3">
+              <div className="footer">
+                <h3 style={{ color: "white" }}>
+                  Dessigned by:{" "}
+                  <a
+                    href="https://www.omprakash.me"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: "yellow", textDecoration: "none" }}
+                  >
+                    <h2 style={{ display: "inline" }}>Omprakash Choudhary</h2>
+                  </a>
+                </h3>
+              </div>
             </div>
           </div>
         </div>
