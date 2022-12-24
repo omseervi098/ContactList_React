@@ -136,14 +136,14 @@ function App() {
             <div className="col-12 col-md-12 mx-auto my-3">
               <div className="footer">
                 <h3 style={{ color: "white" }}>
-                  Dessigned by:{" "}
+                  Check out my other projects on my{" "}
                   <a
                     href="https://www.omprakash.me"
                     target="_blank"
                     rel="noreferrer"
-                    style={{ color: "yellow", textDecoration: "none" }}
+                    style={{ color: "yellow" }}
                   >
-                    <h2 style={{ display: "inline" }}>Omprakash Choudhary</h2>
+                    <h2 style={{ display: "inline" }}>Portfolio</h2>
                   </a>
                 </h3>
               </div>
