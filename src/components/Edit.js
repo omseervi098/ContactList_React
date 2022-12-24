@@ -19,7 +19,6 @@ function Edit(props) {
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            {console.log(props)}
             <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
@@ -35,6 +34,7 @@ function Edit(props) {
                   ></button>
                 </div>
                 <div className="modal-body">
+                  {/* Form to edit contact and sending dummy PUT request to given API */}
                   <form
                     className="form-group"
                     onSubmit={(e) => {

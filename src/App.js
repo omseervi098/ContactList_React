@@ -1,21 +1,28 @@
-import List from "./components/List";
 import React, { useEffect, useState, useCallback } from "react";
+import "react-toastify/dist/ReactToastify.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import { toast, ToastContainer } from "react-toastify";
 import Add from "./components/Add";
+import List from "./components/List";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 function App() {
   const [contacts, setContacts] = useState([]);
+  //State to manage the contacts
   useEffect(() => {
+    //Fetch the data from the API
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((data) => setContacts(data));
   }, []);
 
+  //Add a new contact
   const addContact = (contact) => {
     setContacts([...contacts, contact]);
+    toast.success("Contact Added Successfully");
   };
+  //Update a contact
   const updateContact = (contact) => {
     const updatedContacts = contacts.map((c) => {
       if (c.id === contact.id) {
@@ -24,16 +31,19 @@ function App() {
       return c;
     });
     setContacts(updatedContacts);
+    toast.success("Contact Updated Successfully");
   };
+  //Delete a contact
   const deleteContact = (id) => {
     const updatedContacts = contacts.filter((c) => c.id !== id);
     setContacts(updatedContacts);
+    toast.success("Contact Deleted Successfully");
   };
+  //Below Two function are part of particlesJS library which is used for background animation
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     await loadFull(engine);
   }, []);
-
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
   }, []);
@@ -41,6 +51,18 @@ function App() {
     <>
       <div className="App">
         <div className="container text-center">
+          {/* Toast Container to display alerts */}
+          <ToastContainer
+            position="top-right"
+            autoClose={1500}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
           <Particles
             id="tsparticles"
             init={particlesInit}
@@ -88,7 +110,6 @@ function App() {
               detectRetina: true,
             }}
           />
-
           <div className="header">
             <h1>Contact List</h1>
           </div>

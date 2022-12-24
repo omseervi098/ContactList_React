@@ -45,6 +45,7 @@ function List(props) {
                       editContact={props.editContact}
                     />
                     <div className="row my-auto">
+                      {/* Form to delete contact and sending dummt DELETE Request to given API */}
                       <form
                         action="https://jsonplaceholder.typicode.com/users"
                         method="DELETE"

@@ -1,5 +1,7 @@
 import React from "react";
+//Add a new contact component
 function Add(props) {
+  //used bootstrap modal to add a new contact
   return (
     <div className="container">
       <div className="row">
@@ -34,6 +36,7 @@ function Add(props) {
                   ></button>
                 </div>
                 <div className="modal-body">
+                  {/* Form to add contact and sending dummy POST request to this URL */}
                   <form
                     className="form-group"
                     action="https://jsonplaceholder.typicode.com/users"
@@ -49,7 +52,6 @@ function Add(props) {
                       e.target.name.value = "";
                       e.target.email.value = "";
                       e.target.phone.value = "";
-                      //alert("Contact Added Successfully");
                       document.getElementById("btn-closed").click();
                     }}
                   >

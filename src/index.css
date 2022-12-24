@@ -27,6 +27,7 @@ code {
   top: 0;
   left: 0;
 }
+/* CSS for ith contact container */
 .list-group-item {
   background-color: rgba(185, 225, 247, 0.853) !important;
   color: #000000 !important;
@@ -49,17 +50,20 @@ code {
 .hide h4 {
   font-weight: bolder !important;
 }
+/* CSS for modal */
 .modal-content {
-  background-color: rgba(204, 204, 204, 0.8) !important;
+  background-color: rgb(168, 168, 168) !important;
   color: #000000 !important;
 }
 .modal-content input {
-  background-color: rgba(234, 234, 234, 0.9) !important;
-  color: #000000 !important;
+  background-color: rgba(210, 210, 210, 0.607) !important;
+  color: #0e0e0e !important;
+  font-size: large;
 }
 .col-form-label {
   font-weight: bolder;
 }
+/* CSS for responsive */
 @media screen and (max-width: 768px) {
   .name h3,
   .email,
